@@ -1,0 +1,12 @@
+def main():
+    s = "ababca"
+    c = 'a'
+
+    # Remove all occurrences of 'c' from 's'
+    s = s.replace(c, '')
+
+    print(s)
+
+
+if __name__ == "__main__":
+    main()
