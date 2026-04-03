@@ -1,0 +1,28 @@
+import itertools
+
+# A function to find rank of a string in all permutations
+# of characters
+def findRank(str):
+    
+    # Create a copy of the original 
+    # string to keep it unchanged
+    original = str
+
+    # Sort the string to get the first 
+    # permutation in lexicographic order
+    arr = sorted(str)
+
+    rank = 1
+
+    # Keep generating next permutation
+    # until we find the original string
+    while ''.join(arr) != original:
+        arr = next(itertools.islice(itertools.permutations(arr), 1, None))
+        arr = list(arr)
+        rank += 1
+
+    return rank
+
+if __name__ == "__main__":
+    str = "string"
+    print(findRank(str))
