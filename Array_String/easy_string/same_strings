@@ -1,0 +1,11 @@
+def areStringsSame(s1, s2):
+    return s1 == s2
+
+if __name__ == '__main__':
+    s1 = "abc"
+    s2 = "abcd"
+
+    if areStringsSame(s1, s2):
+        print("Yes")
+    else:
+        print("No")
