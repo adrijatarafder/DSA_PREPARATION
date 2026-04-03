@@ -1,0 +1,25 @@
+def urlify(s: str) -> str:
+    n = len(s)
+    
+    # We use a list to mimic push_back behavior efficiently
+    ans = []
+    
+    for i in range(n):
+        # If " " is encountered, 
+        # append "%20" to the list
+        if s[i] == ' ':
+            ans.append('%')
+            ans.append('2')
+            ans.append('0')
+        
+        # Else append the current 
+        # character.
+        else:
+            ans.append(s[i])
+            
+    # Join the list into a single string at the end
+    return "".join(ans)
+
+if __name__ == "__main__":
+    s = "i love programming"
+    print(urlify(s))
