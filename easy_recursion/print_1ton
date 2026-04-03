@@ -1,0 +1,16 @@
+def printNos(n):
+    if n == 0:
+        
+        # base condition
+        return
+    
+    # recursive call first
+    printNos(n - 1)
+  
+    # print after recursion
+    print(n, end=' ')
+
+
+if __name__ == "__main__":
+    n = 3
+    printNos(n)
