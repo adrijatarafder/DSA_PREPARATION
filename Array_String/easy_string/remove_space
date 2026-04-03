@@ -1,0 +1,13 @@
+def removeSpaces(s):
+    res = []
+
+    for ch in s:
+        if ch != ' ':
+            res.append(ch)
+
+    return "".join(res)
+
+
+if __name__ == "__main__":
+    s = "g  eeks   for ge  eeks  "
+    print(removeSpaces(s))
